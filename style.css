@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'League Spartan', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+main{
+    width:90%;
+    max-width: 700px;
+    border:1px solid red;
+}
+
+.profile-picture{
+    text-align: center;
+}
+
+.profile-picture img{
+    width:50%;
+    max-width:300px;
+    border-radius: 50%;
+}
+
+/*  */
+
+.introduction h1,
+.introduction h2,
+.introduction p{
+    text-align: center;
+}
+
+.introduction h1{
+    font-size: 4rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+   
+}
+
+.introduction h2{
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    color:	#8A2BE2
+}
+
+.introduction p{
+    font-size: 2.5rem;
+}
+.introduction span{
+    color: 	#8A2BE2;
+    font-weight: bold;
+    font-style: italic;
+    
+}
+
+.introduction div{
+    text-align: center;
+    margin-top:3rem;
+    margin-bottom: 3rem;
+}
+
+
+.introduction a{
+   
+    font-size: 2.5rem;
+    background-color:#7FFF00;
+    color: black;
+    padding: 1rem 4rem;
+    border-radius: 10rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+/*  */
+.links{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    border: 1px solid green;
+    margin-bottom: 3rem; 
+}
+
+.links a{
+  
+    width:6rem;
+    border: 1px solid purple;;
+}
+
+.links img{
+    width:100%;
+}
+
+/*  */
+
+.about{
+    border: 1px solid orange;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about h2{
+    border-top: 3px solid green;
+    width: 80%;
+    text-align: center;
+    font-size: 3rem;
+    padding-top:1rem;
+    font-style: italic;
+    margin-bottom:2rem;
+}
+
+.about p{
+    font-size: 2.5rem;
+    width:90%;
+    line-height: 1.25;
+}
+
+/*  */
+.skills{
+    border:1px solid darkorange;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    row-gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    
+
+}
+
+.skills div{
+    border:1px solid darkcyan;
+    width:10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    
+}
+
+
+.skills img{
+    width: 100%;
+}
+
+.skills div:nth-child(2) img,
+.skills div:nth-child(3) img,
+.skills div:nth-child(4) img
+
+{
+    width:85%;
+}
+
+.skills h1{
+    margin-top:1rem;
+}
+
+/* work */
+.work{
+    border: 1px solid greenyellow;
+    margin-bottom: 10rem;
+}
+
+.work section{
+    background-color: lightcyan;
+
+}
+
+.work section div{
+    text-align: center;
+}
+.work section img{
+    width: 85%;
+}
+.work section h1{
+    text-align: center;
+    font-weight: 3rem;
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+   
+
+}
+
+.work section p{
+    font-size: 2rem;
+    padding-top: 2rem;
+    padding-left:2rem;
+    margin-bottom: 1rem;
+}
+
+.work section a{
+    font-size: 2.2rem;
+    padding-left:2rem;
+}
+
+/* email */
+.email{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 10rem;
+    background-color: lightpink;
+
+}
+
+.email div{
+    background-color: lightgreen;
+    width:30%;
+
+}
+
+.email h1{
+    margin-bottom:2rem;
+}
+.email div img{
+    width:100%;
+}
+
+.email p{
+    font-size: 2rem;
+    margin-top:4rem;
+    text-decoration: underline;
+}
+
+/* contact form */
+
+.contact-form input,
+.contact-form textarea{
+    width: 100%;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    padding-left: 1rem;
+    margin-bottom:2rem;
+}
+.contact-form label{
+    font-size: 3rem;
+}
+
+.send-button-container{
+text-align: center;
+}
+
+.send-button-container button{
+    font-size: 2rem;
+    padding: 2rem rem;
+    padding: 1rem 5rem;
+    border-radius: 3rem;
+}
