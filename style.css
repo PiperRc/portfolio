@@ -4,20 +4,111 @@
     box-sizing: border-box;
 }
 
+
 html {
     font-size: 62.5%;
     font-family: 'League Spartan', sans-serif;
 }
 
+
 body {
+    position: relative;
+
+}
+/* navbar hamburger */
+.hamburger {
+    /* border: 1px solid greenyellow; */
+    width: 5rem;
+    height: 5rem;
+    position: fixed;
+    right:3rem;
+    cursor: pointer;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+
 }
 
+.bar {
+    position: relative;
+    width: 75%;
+    height: 10%;
+    background: black;
+    
+}
+
+.bar::before,
+.bar::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: block;
+    
+}
+
+.bar,.bar::before,.bar::after{
+    transition: all .5s ease-in-out;
+}
+.bar::before {
+    transform: translateY(-0.9rem)
+}
+
+.bar::after {
+    transform: translateY(0.9rem)
+}
+
+.hamburger-click .bar{
+    transform: translateX(-5rem);
+    background: transparent;
+}
+
+.hamburger-click .bar::before{
+    transform: rotate(45deg) translate(35px,-35px);
+}
+.hamburger-click .bar::after{
+    transform: rotate(-45deg) translate(35px,35px);
+}
+.hamburger-click .bar::before,.hamburger-click .bar::after{
+    background: red;
+}
+
+
+/* navbar */
+.navbar{
+    height:100vh;
+    background: purple;
+    position:absolute;
+    display: none;
+}
+
+.navbar-display{
+    display:flex;
+}
+
+
+/* body::-webkit-scrollbar{
+    width:1rem;
+}
+
+body::-webkit-scrollbar-track{
+background-color: black;
+} 
+body::-webkit-scrollbar-track{
+background-color: purple;
+} */
+
+
+
+/*  */
 main {
     width: 90%;
-    max-width: 700px;
+    max-width: 1200px;
     border: 1px solid red;
+    padding-top: 3rem;
+    margin: 0 auto;
 }
 
 .profile-picture {
@@ -25,7 +116,7 @@ main {
 }
 
 .profile-picture img {
-    width: 50%;
+    width: 85%;
     max-width: 300px;
     border-radius: 50%;
 }
@@ -39,14 +130,14 @@ main {
 }
 
 .introduction h1 {
-    font-size: 4rem;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
 
 }
 
 .introduction h2 {
-    font-size: 4rem;
+    font-size: 3.9rem;
     margin-bottom: 2rem;
     color: #8A2BE2
 }
@@ -65,7 +156,6 @@ main {
 .introduction div {
     text-align: center;
     margin-top: 3rem;
-    margin-bottom: 3rem;
 }
 
 
@@ -78,6 +168,10 @@ main {
     border-radius: 10rem;
     text-decoration: none;
     font-weight: bold;
+}
+
+header {
+    margin-bottom: 5rem;
 }
 
 /*  */
@@ -93,7 +187,7 @@ main {
 
     width: 6rem;
     border: 1px solid purple;
-    
+
 }
 
 .links img {
@@ -107,6 +201,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 10rem;
 }
 
 .about h2 {
@@ -126,19 +221,28 @@ main {
 }
 
 /*  */
+
 .skills {
     border: 1px solid darkorange;
+    margin-top: 10rem;
+
+}
+
+.skills h2 {
+    text-align: center;
+    font-size: 3rem;
+    padding-bottom: 4rem;
+}
+
+.skills-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
     row-gap: 2rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-
 
 }
 
-.skills div {
+.skills-list div {
     border: 1px solid darkcyan;
     width: 9rem;
     display: flex;
@@ -150,25 +254,31 @@ main {
 }
 
 
-.skills img {
+.skills-list img {
     width: 100%;
 }
 
-.skills div:nth-child(2) img,
-.skills div:nth-child(3) img,
-.skills div:nth-child(4) img {
+.skills-list div:nth-child(2) img,
+.skills-list div:nth-child(3) img,
+.skills-list div:nth-child(4) img {
     width: 85%;
 }
 
-.skills h1 {
+.skills-list h1 {
     margin-top: 1rem;
-    font-size:1.4rem;
+    font-size: 1.4rem;
 }
 
 /* work */
 .work {
     border: 1px solid greenyellow;
-    margin-bottom: 10rem;
+    margin-top: 10rem;
+}
+
+.work h2 {
+    font-size: 3rem;
+    text-align: center;
+    padding-bottom: 3rem;
 }
 
 .work section {
@@ -212,8 +322,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 2rem;
-    margin-bottom: 10rem;
+    margin-top: 10rem;
     background-color: lightpink;
 
 }
@@ -227,20 +336,25 @@ main {
 
 .email h1 {
     margin-bottom: 2rem;
+    font-size: 3rem;
 }
 
 .email div img {
     width: 100%;
-    max-width:100px;
+    max-width: 100px;
 }
 
 .email p {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-top: 4rem;
     text-decoration: underline;
 }
 
 /* contact form */
+
+.contact-form {
+    margin-top: 10rem;
+}
 
 .contact-form input,
 .contact-form textarea {
@@ -249,6 +363,11 @@ main {
     padding: 1rem 0;
     padding-left: 1rem;
     margin-bottom: 2rem;
+}
+
+.contact-form div {
+    text-align: center;
+    padding-bottom: 4rem;
 }
 
 .contact-form label {
@@ -264,45 +383,50 @@ main {
     padding: 2rem rem;
     padding: 1rem 5rem;
     border-radius: 3rem;
+    background-color: red;
+    transition-duration: .5s;
+
+
 }
+
+
+.send-button-container button:hover {
+    background-color: blue;
+}
+
 
 @media screen and (min-width:1000px) {
 
-
-    main {
-        width: 90%;
-        max-width: 2000px;
-    }
-
-    header{
-        display:grid;
+    header {
+        display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: center;
     }
 
-    .profile-picture img{
-        width:100%;
+    .profile-picture img {
+        width: 100%;
     }
-    /*  */
-  
 
- 
+    /*  */
+
+
+
     /*  */
     .links {
-       
+
         padding: 0 40%;
     }
 
 
     /*  */
-  
+
     .about h2 {
         width: 25%;
     }
 
     /*  */
-    .skills {
-     
+    .skills-list {
+
         grid-template-columns: 1fr 1fr 1fr 1fr;
 
     }
@@ -357,47 +481,56 @@ main {
     .email p {
         font-size: 3rem;
     }
+
     /*  */
 
-    .contact-form{
-        padding:3rem;
-        border:1px solid seagreen;
+    .contact-form {
+        padding: 3rem;
+        border: 1px solid seagreen;
     }
 
-    .contact-form form{
-        display:grid;
-        grid-template-areas: 
-        "contact contact"
-        "name email-form"
-        "subject subject"
-        "textarea textarea"
-        "contact-button contact-button"
+    .contact-form div:nth-child(1) {
+        text-align: left;
+    }
+
+    .contact-form form {
+        display: grid;
+        grid-template-areas:
+            "contact contact"
+            "name email-form"
+            "subject subject"
+            "textarea textarea"
+            "contact-button contact-button"
         ;
         grid-template-columns: 1fr 1fr;
-        column-gap:2rem;
+        column-gap: 2rem;
 
     }
 
-    .contact{
-        grid-area:contact
+    .contact {
+        grid-area: contact;
+
     }
 
-    .name{
-        grid-area:name ;
-        
+    .name {
+        grid-area: name;
+
     }
-    .email-form{
+
+    .email-form {
         grid-area: email-form;
     }
-    .subject{
+
+    .subject {
         grid-area: subject;
     }
-    .textarea{
-        grid-area:textarea;
+
+    .textarea {
+        grid-area: textarea;
     }
 
-    .contact-button{
-        grid-area:contact-button;
+    .contact-button {
+        grid-area: contact-button;
     }
 
 
