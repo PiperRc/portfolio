@@ -78,14 +78,51 @@ body {
 
 /* navbar */
 .navbar{
+    border:2px solid green;
     height:100vh;
-    background: purple;
-    position:absolute;
-    display: none;
+    width:50%;
+    background: lightblue;
+    position:fixed;
+    opacity: 0;
+    transition: .5s ease-in-out;
+    z-index: -1;
+ 
+  
+    
+}
+.navbar-display{
+opacity: 1;
+z-index: 1000;
+
+
+
 }
 
-.navbar-display{
-    display:flex;
+
+.navbar-nav{
+    height: 100%;
+    border:1px solid purple;
+    /* width:500%; */
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style: none; 
+    padding:0;
+}
+
+.nav-item{
+    width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   cursor: pointer;
+   
+  
+}
+.nav-item span{
+    font-size: 2rem;
 }
 
 
@@ -384,7 +421,7 @@ header {
     padding: 1rem 5rem;
     border-radius: 3rem;
     background-color: red;
-    transition-duration: .5s;
+    transition-duration: .3s;
 
 
 }
