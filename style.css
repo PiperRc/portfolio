@@ -13,21 +13,21 @@ html {
 
 body {
     position: relative;
-
+    background-color: #f7f7f7;
+    ;
 }
+
 /* navbar hamburger */
 .hamburger {
-    /* border: 1px solid greenyellow; */
     width: 5rem;
     height: 5rem;
     position: fixed;
-    right:3rem;
+    right: 3rem;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .bar {
@@ -35,7 +35,6 @@ body {
     width: 75%;
     height: 10%;
     background: black;
-    
 }
 
 .bar::before,
@@ -46,12 +45,14 @@ body {
     height: 100%;
     background: black;
     display: block;
-    
 }
 
-.bar,.bar::before,.bar::after{
-    transition: all .5s ease-in-out;
+.bar,
+.bar::before,
+.bar::after {
+    transition: all .3s ease-in-out;
 }
+
 .bar::before {
     transform: translateY(-0.9rem)
 }
@@ -60,71 +61,74 @@ body {
     transform: translateY(0.9rem)
 }
 
-.hamburger-click .bar{
+
+/* this is the equivalent of .hamburger-click:hover .bar */
+.hamburger-click .bar {
     transform: translateX(-5rem);
     background: transparent;
 }
 
-.hamburger-click .bar::before{
-    transform: rotate(45deg) translate(35px,-35px);
+.hamburger-click .bar::before {
+    transform: rotate(45deg) translate(35px, -35px);
 }
-.hamburger-click .bar::after{
-    transform: rotate(-45deg) translate(35px,35px);
+
+.hamburger-click .bar::after {
+    transform: rotate(-45deg) translate(35px, 35px);
 }
-.hamburger-click .bar::before,.hamburger-click .bar::after{
+
+.hamburger-click .bar::before,
+.hamburger-click .bar::after {
     background: red;
 }
 
 
 /* navbar */
-.navbar{
-    border:2px solid green;
-    height:100vh;
-    width:50%;
-    background: lightblue;
-    position:fixed;
-    opacity: 0;
-    transition: .5s ease-in-out;
-    z-index: -1;
- 
-  
-    
-}
-.navbar-display{
-opacity: 1;
-z-index: 1000;
-
-
-
+.navbar {
+    height: 100vh;
+    width: 0%;
+    background: #F5FFFA;
+    position: fixed;
+    transition: .3s ease-in;
 }
 
+.navbar-display {
+    width: 50%;
+}
 
-.navbar-nav{
+.navbar-nav {
     height: 100%;
-    border:1px solid purple;
-    /* width:500%; */
-    width:100%;
-    display: flex;
+    width: 100%;
+    display: none;
     flex-direction: column;
     justify-content: space-around;
-    list-style: none; 
-    padding:0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.nav-item{
+/* added to navbar-nav when clicked */
+.navbar-nav-display {
+    display: flex;
+}
+
+.nav-item {
     width: 100%;
-    /* border: 1px solid red; */
+    cursor: pointer;
+}
+
+.contact-nav {
+    padding-left: 1.5rem;
+}
+
+.nav-link {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-   cursor: pointer;
-   
-  
-}
-.nav-item span{
-    font-size: 2rem;
+    justify-content: space-evenly;
 }
 
+.nav-item span {
+    font-size: 2rem;
+}
 
 /* body::-webkit-scrollbar{
     width:1rem;
@@ -137,13 +141,9 @@ body::-webkit-scrollbar-track{
 background-color: purple;
 } */
 
-
-
-/*  */
+/* main and header */
 main {
     width: 90%;
-    max-width: 1200px;
-    border: 1px solid red;
     padding-top: 3rem;
     margin: 0 auto;
 }
@@ -157,8 +157,6 @@ main {
     max-width: 300px;
     border-radius: 50%;
 }
-
-/*  */
 
 .introduction h1,
 .introduction h2,
@@ -197,7 +195,6 @@ main {
 
 
 .introduction a {
-
     font-size: 2.5rem;
     background-color: #7FFF00;
     color: black;
@@ -211,30 +208,26 @@ header {
     margin-bottom: 5rem;
 }
 
-/*  */
+/* links */
 .links {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
-    border: 1px solid green;
     margin-bottom: 3rem;
 }
 
 .links a {
-
     width: 6rem;
-    border: 1px solid purple;
-
 }
 
 .links img {
     width: 100%;
 }
 
-/*  */
+/* about */
 
 .about {
-    border: 1px solid orange;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -242,7 +235,6 @@ header {
 }
 
 .about h2 {
-    border-top: 3px solid green;
     width: 80%;
     text-align: center;
     font-size: 3rem;
@@ -257,12 +249,10 @@ header {
     line-height: 1.25;
 }
 
-/*  */
+/*skills  */
 
 .skills {
-    border: 1px solid darkorange;
     margin-top: 10rem;
-
 }
 
 .skills h2 {
@@ -276,18 +266,15 @@ header {
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
     row-gap: 2rem;
-
 }
 
 .skills-list div {
-    border: 1px solid darkcyan;
     width: 9rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1rem;
     border-radius: 1.5rem;
-
 }
 
 
@@ -308,7 +295,6 @@ header {
 
 /* work */
 .work {
-    border: 1px solid greenyellow;
     margin-top: 10rem;
 }
 
@@ -326,7 +312,6 @@ header {
 
 .work section .img-container {
     text-align: center;
-    border: 1px solid saddlebrown;
 }
 
 .work section img {
@@ -338,8 +323,6 @@ header {
     font-weight: 3rem;
     font-size: 2.5rem;
     padding-bottom: 2rem;
-
-
 }
 
 .work section p {
@@ -360,14 +343,16 @@ header {
     flex-direction: column;
     align-items: center;
     margin-top: 10rem;
-    background-color: lightpink;
+    background-color: white;
 
 }
 
 .email div {
-    background-color: lightgreen;
+   
     width: 30%;
     text-align: center;
+    cursor: pointer;
+ 
 
 }
 
@@ -376,17 +361,19 @@ header {
     font-size: 3rem;
 }
 
-.email div img {
-    width: 100%;
-    max-width: 100px;
-}
-
 .email p {
     font-size: 2.5rem;
     margin-top: 4rem;
-    text-decoration: underline;
+    cursor: pointer;
+  
 }
-
+.email p,.email div i{
+    transition:.3s ease-in; ;
+}
+.email p:hover,.email div i:hover{
+    transform:scale(1.2);
+    
+}
 /* contact form */
 
 .contact-form {
@@ -417,59 +404,128 @@ header {
 
 .send-button-container button {
     font-size: 2rem;
-    padding: 2rem rem;
+    padding: 2rem;
     padding: 1rem 5rem;
     border-radius: 3rem;
-    background-color: red;
-    transition-duration: .3s;
-
-
+    background-color: grey;
+    background-color: whitesmoke;
 }
 
 
-.send-button-container button:hover {
+/* .send-button-container button:hover {
     background-color: blue;
-}
+} */
 
 
 @media screen and (min-width:1000px) {
+
+    .hamburger {
+        display: none;
+    }
+
+    main {
+        margin: 0;
+        margin-left: 13.5rem;
+    }
+
+
+    .navbar {
+        width: 13.5rem;
+        cursor: pointer;
+        transition: .5s;
+    }
+
+    .navbar:hover {
+        width: 25rem;
+    }
+
+    .navbar-nav {
+        display: flex;
+    }
+
+
+    .nav-item {
+        /* leaving the width at 100% will cause it to 'expand' as the navbar expands*/
+        width: 13.5rem;
+        margin-left: 3rem;
+        ;
+    }
+
+    .contact-nav {
+        margin-left: 3.7rem;
+    }
+
+    .nav-item span {
+        visibility: hidden;
+        margin-left: 2rem;
+    }
+
+    .nav-link {
+        height: 13.5rem;
+    }
+
+    .navbar:hover .nav-item span {
+        visibility: visible;
+    }
+
+    .nav-item:hover .nav-image {
+        color: #FF00FF;
+    }
+
+    /*  header*/
 
     header {
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: center;
+        min-height: 100vh;
     }
 
     .profile-picture img {
         width: 100%;
     }
 
-    /*  */
 
-
-
-    /*  */
     .links {
-
         padding: 0 40%;
     }
+   /* about */
+    .about {
+        background-color: white;
+        width: 95%;
+        padding: 2.5rem;
+        margin: 0 auto;
+        margin-top: 6rem;
+        border-radius: 5rem;
 
-
-    /*  */
-
-    .about h2 {
-        width: 25%;
     }
 
-    /*  */
+    .about h2,
+    .about p {
+        width: 100%;
+       
+    }
+
+
+
+    /*  skills*/
+
+    .skills {
+        background-color: white;
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 10rem;
+        border-radius: 5rem;
+        padding:2.5rem;
+    }
+
+   
     .skills-list {
-
         grid-template-columns: 1fr 1fr 1fr 1fr;
-
     }
 
 
-    /*  */
+    /*work  */
 
     .work {
         padding: 3rem;
@@ -480,8 +536,7 @@ header {
         grid-template-areas:
             "div h1"
             "div p"
-            "div project-links"
-        ;
+            "div project-links";
         grid-template-columns: 1fr 1fr;
         justify-items: left;
     }
@@ -510,7 +565,14 @@ header {
         grid-area: project-links;
     }
 
-    /*  */
+    /* email */
+    .email {
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 10rem;
+        border-radius: 5rem;
+    }
+
     .email h1 {
         font-size: 5rem;
     }
@@ -523,7 +585,6 @@ header {
 
     .contact-form {
         padding: 3rem;
-        border: 1px solid seagreen;
     }
 
     .contact-form div:nth-child(1) {
@@ -537,16 +598,13 @@ header {
             "name email-form"
             "subject subject"
             "textarea textarea"
-            "contact-button contact-button"
-        ;
+            "contact-button contact-button";
         grid-template-columns: 1fr 1fr;
         column-gap: 2rem;
-
     }
 
     .contact {
         grid-area: contact;
-
     }
 
     .name {
@@ -568,7 +626,39 @@ header {
 
     .contact-button {
         grid-area: contact-button;
+
+    }
+
+    .contact-button button {
+        position: relative;
+        z-index: 1;
+        transition: font-size .3s ease;
+    }
+
+    .contact-button button:hover {
+        /* transform: scale(1.2); */
+        color: purple;
+        
     }
 
 
+    .contact-button button::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 2rem;
+        padding: 1rem 5rem;
+        border-radius: 3rem;
+        background-color: #7FFF00;
+        z-index: -1;
+        transform: scaleX(0);
+        transition: .5s ease;
+    }
+
+    .contact-button button:hover::before {
+        transform: scaleX(1);
+    }
 }
