@@ -5,209 +5,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <!--  -->
-
-    <!-- font awesome -->
-    <script src="https://kit.fontawesome.com/493b3e3710.js" crossorigin="anonymous"></script>
-    <!--  -->
-
-
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/493b3e3710.js" crossorigin="anonymous"></script>
     <title>Cheyenne Piper</title>
 </head>
 
 <body>
+    <div class="container">
+        <main>
+            <h1>COMING <span>SOON</span></h1>
+            <p>In the Meantime, I can be contacted at:</p>
 
-    <div class="hamburger">
-        <div class="bar"></div>
-    </div>
-
-    <nav class="navbar">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a href="#home-nav" class="nav-link">
-                    <i class="fa-solid fa-house fa-5x nav-image"></i>
-                    <span>HOME</span>
-                </a>
-            </li>
-
-            <li class="nav-item">
-                <a href="#about-nav" class="nav-link">
-                    <i class="fa-solid fa-user fa-5x nav-image"></i>
-                    <span>ABOUT</span>
-                </a>
-
-            </li>
-
-            <li class="nav-item">
-                <a href="#skills-nav" class="nav-link">
-                    <i class="fa-solid fa-desktop fa-5x nav-image"></i>
-                    <span>SKILLS</span>
-                </a>
-
-            </li>
-
-            <li class="nav-item">
-                <a href="#work-nav" class="nav-link">
-                    <i class="fa-solid fa-briefcase fa-5x nav-image"></i>
-                    <span>WORK</span>
-                </a>
-
-            </li>
-
-            <li class="nav-item contact-nav">
-                <a href="#email-nav" class="nav-link">
-                    <i class="fa-solid fa-envelope fa-5x nav-image"></i>
-                    <span>CONTACT</span>
-                </a>
-
-            </li>
-        </ul>
-
-    </nav>
-
-    <main>
-
-
-        <header>
-            <div class="profile-picture" id="home-nav">
-                <img src="images/profile_picture/profile_picture.png" alt="profile-picutre">
+            <div class="social-media">
+                <a href="https://www.facebook.com/cheyenne.piper.9" class="facebook"> <i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/piper_robelto/" class="instagram"><i class="fa-brands fa-instagram"></i></a>
             </div>
 
-            <section class="introduction">
-                <h1>Hi There! I'm</h1>
-                <h2>Cheyenne Piper</h2>
-                <p>I am a <span>Front-End Developer</span> currently located in Toronto, Canada.
-                    I am passionate about bringing ideas to fruition.
-                </p>
-                <div> <a href="#">Resume</a></div>
-            </section>
+            <h2>or fill out the contact form below:</h2>
 
-        </header>
+            <form action="https://api.web3forms.com/submit" method="POST">
 
-        <section class="links">
+               
+                <input type="hidden" name="access_key" value="1559e601-1e30-4ee0-be81-9d97afc7434a">
+                <input type="text" id="name" name="name" placeholder="Name*" required>
 
-            <a href="#">
-                <img src="images/social_media_logos/facebook.png" alt="facebook-logo">
-            </a>
+                <input type="email" id="email" name="email" placeholder="Email*" required>
 
+                <textarea name="message" id="message" cols="30" rows="20" placeholder="Message*" required></textarea>
 
-
-            <a href="#">
-                <img src="images/social_media_logos/github-logo.png" alt="github-logo">
-            </a>
-
-
-        </section>
-
-
-        <section class="about">
-            <h2 id="about-nav">ABOUT ME</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Iste odit asperiores sequi temporibus accusantium, dignissimos assumenda et debitis, tempora facilis
-                consequuntur voluptatum
-                exercitationem sed non facere distinctio vel enim similique.</p>
-
-        </section>
-
-        <section class="skills" id="skills-nav">
-            <h2>SKILLS</h2>
-            <div class="skills-list">
-                <div>
-                    <img src="images/skill_icons/html.svg" alt="html-logo">
-                    <h1>HTML</h1>
-                </div>
-
-                <div>
-                    <img src="images/skill_icons/css.svg" alt="css-logo">
-                    <h1>CSS</h1>
-                </div>
-
-                <div>
-                    <img src="images/skill_icons/javscript.svg" alt="javscript-logo">
-                    <h1>JAVASCRIPT</h1>
-                </div>
-
-                <div>
-                    <img src="images/skill_icons/bootstrap.svg" alt="bootstrap-logo">
-                    <h1>BOOTSTRAP</h1>
-                </div>
-            </div>
-
-
-        </section>
-
-        <section class="work" id="work-nav">
-            <h2>PROJECTS</h2>
-
-            <section class="project_one">
-                <h1>Link Shortener</h1>
-                <div class="img-container">
-                    <img src="images/project_screenshots/link_shortener.png" alt="link_shortener">
-                </div>
-                <p>URL link Shortener-Shorten URL links</p>
-                <div class="project-links">
-                    <a href="#" class="live-link">Live</a>
-                    <a href="#" class="repo-link">Repo</a>
-                </div>
-            </section>
-
-            <section class="project_one">
-                <h1>Link Shortener</h1>
-                <div class="img-container">
-                    <img src="images/project_screenshots/link_shortener.png" alt="link_shortener">
-                </div>
-                <p>URL link Shortener-Shorten URL links</p>
-                <div class="project-links">
-                    <a href="#" class="live-link">Live</a>
-                    <a href="#" class="repo-link">Repo</a>
-                </div>
-            </section>
-
-
-        </section>
-
-        <section class="email" id="email-nav">
-            <h1>Get in Contact!</h1>
-
-            <div>
-                <i class="fa-solid fa-envelope fa-10x nav-image"></i>
-            </div>
-
-            <p>robeltopiper@gmail.com</p>
-
-        </section>
-
-
-
-
-        <section class="contact-form" id="">
-
-            <form action="">
-                <div> <label for="contact" class="contact">Contact Form</label></div>
-
-                <input type="text" placeholder="Your Name*" name="name" id="contact" class="name" required>
-                <input type="text" placeholder="Your Email*" name="email" class="email-form" required>
-                <input type="text" placeholder="Subject*" name="subject" class="subject" required>
-                <textarea placeholder="Message*" name="message" rows="5" class="textarea" required></textarea>
-                <div class="send-button-container contact-button">
-                    <button>SEND</button>
-                </div>
-
-
+                <input type="hidden" name="redirect" value="">
+                <button>SEND</button>
             </form>
 
-        </section>
+        </main>
+    </div>
 
-    </main>
-
-
-    <script src="app.js"></script>
 </body>
 
 </html>
